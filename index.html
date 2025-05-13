@@ -26,7 +26,6 @@
       color: #333;
       display: none;
     }
-    /* Estilos para el spinner */
     .spinner {
       border: 4px solid #f3f3f3;
       border-top: 4px solid #3498db;
@@ -54,8 +53,6 @@
 </head>
 <body>
   <h1>Dashboard de Agricultura</h1>
-  
-  <!-- Spinner de carga -->
   <div class="loading" id="loading">
     <div class="spinner"></div>
     Cargando el dashboard...
@@ -69,10 +66,11 @@
     onload="document.getElementById('loading').style.display = 'none';">
   </iframe>
 
-  <!-- Texto adicional -->
   <div class="content">
     <h2>¿Cuáles son los cultivos más productivos en Colombia según la producción general por cultivo?</h2>
     <p>Permite tomar decisiones estratégicas claras: los agricultores, empresas o instituciones pueden enfocarse en los cultivos que más producción generan (como el maíz), lo cual es crucial para mejorar la rentabilidad, planear subsidios, orientar políticas públicas y optimizar el uso del suelo agrícola en Colombia.</p>
+    <h2> ¿Qué porcentaje de las cosechas se logró por tipo de ciclo (transitorio, permanente y anual)? </h2>
+    <p>La gráfica “Porcentajes Por Ciclos” indica que los cultivos transitorios (como arroz, maíz, frijol y papa) representan el 52.87% de la producción. Los cultivos permanentes (como café, caña y plátano) representan un 40.1%, mientras que los anuales (como la yuca) apenas un 7.03%. Esto sugiere que los cultivos transitorios son los más utilizados y posiblemente los más rentables a corto plazo</p>
   </div>
 
 </body>

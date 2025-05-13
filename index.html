@@ -9,23 +9,72 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 20px;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      margin-bottom: 20px;
     }
     iframe {
       border: none;
       width: 100%;
       height: 80vh;
+      min-height: 600px;
+    }
+    .loading {
+      font-size: 1.2em;
+      color: #333;
+      display: none;
+    }
+    /* Estilos para el spinner */
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .content {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #333;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <h1>Dashboard de Agricultura</h1>
   
+  <!-- Spinner de carga -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    Cargando el dashboard...
+  </div>
+
   <iframe 
-    title="POWERBI_agricultura"
+    title="Dashboard de Agricultura Power BI"
     src="https://app.powerbi.com/view?r=eyJrIjoiMGUyNGEzMTAtYmJiNC00NmFlLWIzZDYtNTY5YmFiMzMyYzVhIiwidCI6IjRmMWUwNDRkLTNkNzAtNDk5MC1iMjZhLWI5NWYwYzY0MmUxYSIsImMiOjR9" 
     frameborder="0" 
-    allowFullScreen="true">
+    allowFullScreen="true"
+    onload="document.getElementById('loading').style.display = 'none';">
   </iframe>
+
+  <!-- Texto adicional -->
+  <div class="content">
+    <h2>¿Cuáles son los cultivos más productivos en Colombia según la producción general por cultivo?</h2>
+    <p><strong>Justificación para el profe:</strong></p>
+    <p>Esta es la pregunta más valiosa porque permite tomar decisiones estratégicas claras: los agricultores, empresas o instituciones pueden enfocarse en los cultivos que más producción generan (como el maíz), lo cual es crucial para mejorar la rentabilidad, planear subsidios, orientar políticas públicas y optimizar el uso del suelo agrícola en Colombia.</p>
+  </div>
 
 </body>
 </html>
